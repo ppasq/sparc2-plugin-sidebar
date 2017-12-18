@@ -15,19 +15,29 @@
 
   box-sizing: border-box;
 
-  h1 { font-size: 2.25rem; }
-  h2 { font-size: 2rem; }
-  h3 { font-size: 1.75rem; }
-  h4 { font-size: 1.5rem; }
-  h5 { font-size: 1.1rem; }
-  h6 { font-size: 1rem; }
-  /*h5 { font-size: 1.33rem; }
-  h6 { font-size: 1.125rem; }*/
+  h2 {
+    background: @wfp-color-primary;
+    color: white;
+    font-size: 2rem;
+    line-height: 1.1;
+    margin: 0;
+    padding: 0.5rem 1rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+    line-height: 1.1;
+    padding: 0.5rem 1rem;
+  }
 
   .footnote { font-size: 0.8rem; }
 
   .input-group {
-    margin-bottom: 8px;
+    padding: 0 1rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .go {
+    padding: 0.5rem 1rem;
   }
 
   .twitter-typeahead {
@@ -44,9 +54,15 @@
   }
 
   .input-group-addon {
+    border: 1px solid @gray-light;
+    box-shadow: none;
     padding: 6px 12px;
     line-height: 20px;
     vertical-align: middle;
+    .btn {
+      font-weight: 400;
+      vertical-align: top;
+    }
   }
 }
 
@@ -116,12 +132,13 @@
   }
 
   .geodash-sidebar-layers-selected {
-    background: @geodash-sidebar-selection-background;
+    background: @gray-lighter;
     padding: 10px;
-    border-radius: 10px;
+    h5 {
+      font-size: 1rem;
+    }
 
     a, span, h4, h5, h6 {
-      color: @geodash-sidebar-selction-color;
     }
   }
 

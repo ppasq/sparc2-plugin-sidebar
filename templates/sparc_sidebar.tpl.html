@@ -1,22 +1,15 @@
 <div
   id="geodash-sidebar-left"
   class="geodash-sidebar geodash-sidebar-left geodash-controller sidebar-open sidebar-left-open">
+
+
+
   <div style="width:100%;">
-    <div class="geodash-sidebar-header">
-      <div class="geodash-sidebar-header-left">
-        <a href="/"><img ng-src="{{ ui.header.logo.src }}" alt="{{ ui.header.logo.alt }}"></a>
-      </div>
-      <div class="geodash-sidebar-header-right">
-        <div><a class="geodash-sidebar-header-title" href="/" ng-bind-html="ui.header.title"></a></div>
-        <div><a class="geodash-sidebar-header-subtitle" href="/" ng-bind-html="ui.header.subtitle"></a></div>
-      </div>
-      <div class="geodash-sidebar-header-right-2">
-        <div ng-bind-html="state.country_title"></div>
-      </div>
-    </div>
+    <h2>WFP <span style="font-weight:300">SPARC</span></h2>
+    <h3 ng-bind-html="state.country_title"></h3>
+
     <div>
       <div class="input-group">
-        <span class="input-group-addon" id="country-addon">Country</span>
         <input
           id="country-input"
           name="country-input"
@@ -33,25 +26,26 @@
           data-search-output="id"
           data-template-empty="<div class=&quot;alert alert-danger empty-message&quot;>Unable to find country</div>">
           <div
-            class="input-group-addon btn btn-primary btn-show-options"
+            class="input-group-addon btn btn-default"
             data-toggle="tooltip"
             data-placement="bottom"
             title="Show Options"
             data-target-input-id="country-input"
             ng-click="clearAndShowOptions($event)">
-            <i class="fa fa-chevron-down"></i>
+            <i class="fa fa-angle-down"></i>
           </div>
           <div
-            class="input-group-addon btn btn-danger geodash-clear"
+            class="input-group-addon btn btn-default"
             data-toggle="tooltip"
             data-placement="bottom"
             title="Clear Selection"
             data-target-input-id="country-input">
-            <i class="fa fa-times"></i>
+            <span>x</span>
           </div>
       </div>
+
+
       <div class="input-group">
-        <span class="input-group-addon" id="hazard-addon">Hazard</span>
         <input
           id="hazard-input"
           name="hazard-input"
@@ -67,34 +61,32 @@
           data-target-scope-path="hazard"
           data-search-output="id"
           data-template-empty="<div class=&quot;alert alert-danger empty-message&quot;>Unable to find hazard</div>">
-          <div
-            class="input-group-addon btn btn-primary btn-show-options"
-            data-toggle="tooltip"
-            data-placement="bottom"
-            title="Show Options"
-            data-target-input-id="hazard-input"
-            ng-click="clearAndShowOptions($event)">
-            <i class="fa fa-chevron-down"></i>
-          </div>
-          <div
-            class="input-group-addon btn btn-danger geodash-clear"
-            data-toggle="tooltip"
-            data-placement="bottom"
-            title="Clear Selection"
-            data-target-input-id="hazard-input">
-            <i class="fa fa-times"></i>
-          </div>
+        <div
+          class="input-group-addon btn btn-default"
+          data-toggle="tooltip"
+          data-placement="bottom"
+          title="Show Options"
+          data-target-input-id="hazard-input"
+          ng-click="clearAndShowOptions($event)">
+          <i class="fa fa-angle-down"></i>
+        </div>
+        <div
+          class="input-group-addon btn btn-default"
+          data-toggle="tooltip"
+          data-placement="bottom"
+          title="Clear Selection"
+          data-target-input-id="hazard-input">
+          <span>x</span>
+        </div>
       </div>
-      <ul class="nav nav-justified welcome-go">
-        <li>
-          <a
+      <p class="go">
+        <a
             ng-disabled="country == undefined || hazard == undefined || country == '' || hazard == '' || (country == state.iso3 && hazard == state.hazard)"
-            ng-class="country == undefined || hazard == undefined || country == '' || hazard == '' || (country == state.iso3 && hazard == state.hazard) ? 'btn btn-default' : 'btn btn-primary' "
+            ng-class="country == undefined || hazard == undefined || country == '' || hazard == '' || (country == state.iso3 && hazard == state.hazard) ? 'btn btn-default btn-block' : 'btn btn-primary btn-block' "
             ng-href="{{ country == undefined || hazard == undefined || country == '' || hazard == '' || (country == state.iso3 && hazard == state.hazard) ? '#' : '/country/'+country+'/hazard/'+hazard +'/month/1' }}">Change</a>
-        </li>
-      </ul>
+      </p>
     </div>
-    <hr>
+
     <div geodash-tabs></div>
     <div class="tab-content">
       <!-- <div
