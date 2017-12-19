@@ -7,8 +7,24 @@
 }
 
 .geodash-sidebar-left {
+  background: @gray-lighter;
   border-right: @geodash-sidebar-border-width solid @geodash-sidebar-border-background;
   border-radius: @geodash-sidebar-border-radius;
+
+  .nav > li > a {
+    font-size: 0.8em;
+    padding: 0.6em 1em 0;
+  }
+
+  .tab-content {
+    background: white;
+  }
+}
+
+.geodash-sidebar-layers-group {
+  h5 {
+    font-size: 1rem;
+  }
 }
 
 .geodash-sidebar {
@@ -34,6 +50,10 @@
   .input-group {
     padding: 0 1rem;
     margin-bottom: 0.25rem;
+    .form-control {
+      -webkit-box-shadow: none;
+              box-shadow: none;
+    }
   }
 
   .go {
@@ -72,7 +92,6 @@
   .geodash-sidebar-header {
     position: relative;
     color: @geodash-sidebar-header-color;
-    /*font-family: @geodash-sidebar-header-font-family;*/
     background: @geodash-sidebar-header-background;
     height: 80px;
     padding: 4px;
