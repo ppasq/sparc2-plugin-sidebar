@@ -7,27 +7,21 @@
 }
 
 .geodash-sidebar-left {
-  border-right: @geodash-sidebar-border-width solid @geodash-sidebar-border-background;
   border-radius: @geodash-sidebar-border-radius;
 }
 
 .geodash-sidebar {
-
   box-sizing: border-box;
-
-  h1 { font-size: 2.25rem; }
-  h2 { font-size: 2rem; }
-  h3 { font-size: 1.75rem; }
-  h4 { font-size: 1.5rem; }
-  h5 { font-size: 1.1rem; }
-  h6 { font-size: 1rem; }
-  /*h5 { font-size: 1.33rem; }
-  h6 { font-size: 1.125rem; }*/
 
   .footnote { font-size: 0.8rem; }
 
   .input-group {
-    margin-bottom: 8px;
+    padding: 0 1rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .go {
+    padding: 0.5rem 1rem;
   }
 
   .twitter-typeahead {
@@ -44,9 +38,15 @@
   }
 
   .input-group-addon {
+    border: 1px solid @gray-light;
+    box-shadow: none;
     padding: 6px 12px;
     line-height: 20px;
     vertical-align: middle;
+    .btn {
+      font-weight: 400;
+      vertical-align: top;
+    }
   }
 }
 
@@ -56,37 +56,38 @@
   .geodash-sidebar-header {
     position: relative;
     color: @geodash-sidebar-header-color;
-    /*font-family: @geodash-sidebar-header-font-family;*/
     background: @geodash-sidebar-header-background;
     height: 80px;
     padding: 4px;
 
     a {
       color: @geodash-sidebar-header-color;
+      text-decoration: none;
     }
 
     .geodash-sidebar-header-left {
-      width: 88px;
-      border-right: 1px solid white;
-
       img {
-        padding-left: 12px;
-        height: 72px;
+        border-right: 1px solid white;
+        height: 56px;
+        margin: 8px 0 8px 8px;
+        padding: 0 12px 0 0;
       }
     }
 
     .geodash-sidebar-header-right {
       position: absolute;
-      top: ~"calc(50% - 25px)";
-      left: 108px;
+      top: 8px;
+      left: 96px;
 
       a.geodash-sidebar-header-title {
-        font-size: 28px;
+        font-size: 2.25rem;
+        font-weight: 900;
         line-height: 36px;
       }
       a.geodash-sidebar-header-subtitle {
-        font-size: 14px;
-        line-height: 14px;
+        font-size: 1rem;
+        font-weight: 300;
+        line-height: 1.5rem;
       }
 
     }
@@ -116,12 +117,13 @@
   }
 
   .geodash-sidebar-layers-selected {
-    background: @geodash-sidebar-selection-background;
+    background: @gray-lighter;
     padding: 10px;
-    border-radius: 10px;
+    h5 {
+      font-size: 1rem;
+    }
 
     a, span, h4, h5, h6 {
-      color: @geodash-sidebar-selction-color;
     }
   }
 

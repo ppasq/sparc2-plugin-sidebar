@@ -5,26 +5,17 @@
   position: absolute;
   top: ~"calc(50% - 50px)";
   width: 40px;
-  height: 100px;
+  padding: 2em 0;
   z-index: @geodash-map-sidebar-toggle-z-index;
-
-  /* Colors & Background */
   color: @geodash-map-sidebar-toggle-color;
   background: @geodash-map-sidebar-toggle-background;
-
-  /* Border, Padding, & Margin */
-  padding: 0;
   border: 0;
-
-  /* Font */
-  font-size: 24px;
-  line-height: 100px;
 }
 
 .geodash-map-sidebar-toggle.geodash-map-sidebar-toggle-left {
 
-  left: 0px;
-  border-radius: 0px 6px 6px 0px;
+  left: 0;
+  border-radius: 0;
 
   .icon-arrow-lt {
     display: none;
@@ -36,8 +27,8 @@
 
 .geodash-map-sidebar-toggle.geodash-map-sidebar-toggle-right {
 
-  right: 0px;
-  border-radius: 6px 0px 0px 6px;
+  right: 0;
+  border-radius: 0;
 
   .icon-arrow-gt {
     display: none;

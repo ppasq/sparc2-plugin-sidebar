@@ -4,19 +4,19 @@
   <div style="width:100%;">
     <div class="geodash-sidebar-header">
       <div class="geodash-sidebar-header-left">
-        <a href="/"><img ng-src="{{ ui.header.logo.src }}" alt="{{ ui.header.logo.alt }}"></a>
+        <a href="/"><img src="https://executiveboard.wfp.org/themes/custom/wfp_eb/dist/images/logos/logo-small.svg"></a>
       </div>
       <div class="geodash-sidebar-header-right">
         <div><a class="geodash-sidebar-header-title" href="/" ng-bind-html="ui.header.title"></a></div>
         <div><a class="geodash-sidebar-header-subtitle" href="/" ng-bind-html="ui.header.subtitle"></a></div>
       </div>
-      <div class="geodash-sidebar-header-right-2">
+      <!-- <div class="geodash-sidebar-header-right-2">
         <div ng-bind-html="state.country_title"></div>
-      </div>
+      </div> -->
     </div>
     <div>
       <div class="input-group">
-        <span class="input-group-addon" id="country-addon">Country</span>
+        <!-- <span class="input-group-addon" id="country-addon">Country</span> -->
         <input
           id="country-input"
           name="country-input"
@@ -33,7 +33,7 @@
           data-search-output="id"
           data-template-empty="<div class=&quot;alert alert-danger empty-message&quot;>Unable to find country</div>">
           <div
-            class="input-group-addon btn btn-primary btn-show-options"
+            class="input-group-addon btn btn-default btn-show-options"
             data-toggle="tooltip"
             data-placement="bottom"
             title="Show Options"
@@ -42,7 +42,7 @@
             <i class="fa fa-chevron-down"></i>
           </div>
           <div
-            class="input-group-addon btn btn-danger geodash-clear"
+            class="input-group-addon btn btn-default geodash-clear"
             data-toggle="tooltip"
             data-placement="bottom"
             title="Clear Selection"
@@ -51,7 +51,7 @@
           </div>
       </div>
       <div class="input-group">
-        <span class="input-group-addon" id="hazard-addon">Hazard</span>
+        <!-- <span class="input-group-addon" id="hazard-addon">Hazard</span> -->
         <input
           id="hazard-input"
           name="hazard-input"
@@ -68,7 +68,7 @@
           data-search-output="id"
           data-template-empty="<div class=&quot;alert alert-danger empty-message&quot;>Unable to find hazard</div>">
           <div
-            class="input-group-addon btn btn-primary btn-show-options"
+            class="input-group-addon btn btn-default btn-show-options"
             data-toggle="tooltip"
             data-placement="bottom"
             title="Show Options"
@@ -77,7 +77,7 @@
             <i class="fa fa-chevron-down"></i>
           </div>
           <div
-            class="input-group-addon btn btn-danger geodash-clear"
+            class="input-group-addon btn btn-default geodash-clear"
             data-toggle="tooltip"
             data-placement="bottom"
             title="Clear Selection"
