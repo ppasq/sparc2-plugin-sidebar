@@ -1,9 +1,6 @@
 @import "variables.less";
 
 .geodash-sidebar, .c3-axis-y-label {
-  /*font-family: Verdana;
-  letter-spacing: 0.1em;
-  font-size: 14px;*/
 }
 
 .geodash-sidebar-left {
@@ -53,12 +50,20 @@
 
 .geodash-sidebar {
 
+  h5 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: .1em;
+  }
+
   .geodash-sidebar-header {
     position: relative;
     color: @geodash-sidebar-header-color;
     background: @geodash-sidebar-header-background;
+    box-shadow: 0 1px 3px rgba(0,0,0,.25);
     height: 80px;
-    padding: 4px;
+    margin-bottom: 0.5rem;
+    padding: 0.25rem;
 
     a {
       color: @geodash-sidebar-header-color;
@@ -117,13 +122,14 @@
   }
 
   .geodash-sidebar-layers-selected {
-    background: @gray-lighter;
-    padding: 10px;
+    border-bottom: 1px solid @gray-light;
+    margin-bottom:  1.5rem;
+    padding: 0 0 1.5rem;
     h5 {
-      font-size: 1rem;
+      color: @wfp-color-primary;
     }
-
-    a, span, h4, h5, h6 {
+    a {
+      color: @wfp-color-primary;
     }
   }
 
@@ -164,7 +170,7 @@
       width: 20px;
       height: 100%;
       vertical-align: text-bottom;
-      font-size: 20px;
+      font-size: 1rem;
       margin-right: 4px;
 
       a {
@@ -207,11 +213,11 @@
       }
 
       i.fa {
-        color: black;
+        color: @geodash-sidebar-item-color;
       }
 
       i.fa:hover {
-        color: blue;
+        color: @wfp-color-primary;
       }
     }
 
