@@ -10,11 +10,23 @@
 .geodash-sidebar {
   box-sizing: border-box;
 
+  [type=text].form-control, input[type=text] {
+    box-shadow: none;
+  }
+
+  ul.nav-tabs li a {
+    font-size: 0.75rem;
+  }
+
   .footnote { font-size: 0.8rem; }
 
   .input-group {
     padding: 0 1rem;
     margin-bottom: 0.25rem;
+    .btn, .btn-default {
+      color: @gray;
+      vertical-align: middle;
+    }
   }
 
   .go {
@@ -35,15 +47,12 @@
   }
 
   .input-group-addon {
-    border: 1px solid @gray-light;
+    background-color: white;
+    border: 1px solid @gray-lighter;
     box-shadow: none;
     padding: 6px 12px;
     line-height: 20px;
     vertical-align: middle;
-    .btn {
-      font-weight: 400;
-      vertical-align: top;
-    }
   }
 }
 
