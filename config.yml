@@ -29,8 +29,8 @@ modals:
       tabs:
         - target: sparc-modal-layer-general
           label: General
-        - target: sparc-modal-layer-attributes
-          label: Attributes
+        #- target: sparc-modal-layer-attributes
+        #  label: Attributes
         - target: sparc-modal-layer-source
           label: Source
         - target: sparc-modal-layer-download
