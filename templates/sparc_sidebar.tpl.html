@@ -4,7 +4,8 @@
   <div style="width:100%;">
     <div class="geodash-sidebar-header">
       <div class="geodash-sidebar-header-left">
-        <a href="/"><img src="https://executiveboard.wfp.org/themes/custom/wfp_eb/dist/images/logos/logo-small.svg"></a>
+        <a class="screen" href="/"><img src="https://executiveboard.wfp.org/themes/custom/wfp_eb/dist/images/logos/logo-small.svg"></a>
+        <a class="print" href="/"><img style="height: 2cm" src="/static/sparc2/build/img/en-emblem.svg"></a>
       </div>
       <div class="geodash-sidebar-header-right">
         <div><a class="geodash-sidebar-header-title" href="/" ng-bind-html="ui.header.title"></a></div>
@@ -14,7 +15,7 @@
         <div ng-bind-html="state.country_title"></div>
       </div> -->
     </div>
-    <div>
+    <div class="search-risk-form">
       <div class="input-group">
         <!-- <span class="input-group-addon" id="country-addon">Country</span> -->
         <input
@@ -94,7 +95,6 @@
         </li>
       </ul>
     </div>
-    <hr>
     <div geodash-tabs></div>
     <div class="tab-content">
       <!-- <div
@@ -109,7 +109,7 @@
         id="geodash-sidebar-left-charts"
         role="tabpanel"
         class="geodash-sidebar-pane tab-pane fade in active"
-        style="padding: 24px 24px 50px 24px;overflow-y: scroll; height: calc(100% - 300px);">
+        style="padding: 24px 24px 50px 24px;overflow-y: scroll; height: calc(100% - 260px);">
         <div
           ng-repeat="chart in dashboard.sidebar.ui.charts track by $index"
           on-repeat-done="chart_done"
@@ -134,7 +134,7 @@
         role="tabpanel"
         class="geodash-sidebar-pane tab-pane fade"
         style="padding: 24px 24px 50px 24px;">
-        <div style="max-height: calc(100% - 350px);overflow-y:scroll;">
+        <div style="max-height: calc(100% - 280px); overflow-y:scroll;">
           <div ng-class="geodash-sidebar-layers-group">
             <div class="geodash-sidebar-layers-selected">
               <h5>Selected Layers</h5>
@@ -150,10 +150,8 @@
                        data-intent-name="hideLayer"
                        data-intent-data="{&quot;layer&quot;:&quot;{{ layer.id }}&quot;}"
                        data-intent-ctrl="geodash-sidebar-left"
-                       data-toggle="tooltip"
                        data-placement="bottom"
                        data-container="#geodash-sidebar-left"
-                       title="Click to hide this layer."
                        >
                        <i class="fa fa-times"></i>
                      </a>
@@ -163,8 +161,6 @@
                       class="geodash-intent"
                       data-intents="{{ intents({'layer': layer, 'name': 'info' }) | json : 0 }}"
                       data-intent-ctrl="geodash-sidebar-left"
-                      data-toggle="tooltip"
-                      data-placement="bottom"
                       data-container="#geodash-sidebar-left"
                       title="Click to learn more about this layer.">
                       <i class="fa fa-info-circle"></i>
