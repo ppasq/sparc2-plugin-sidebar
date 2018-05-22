@@ -5,11 +5,13 @@
     <div class="geodash-sidebar-header">
       <div class="geodash-sidebar-header-left">
         <a class="screen" href="/"><img src="https://executiveboard.wfp.org/themes/custom/wfp_eb/dist/images/logos/logo-small.svg"></a>
-        <a class="print" href="/"><img style="height: 2cm" src="/static/sparc2/build/img/en-emblem.svg"></a>
+        <!-- <a class="print" href="/"><img style="height: 2cm" src="/static/sparc2/build/img/en-emblem.svg"></a> -->
+        <a class="print" href="/"><img src="https://executiveboard.wfp.org/themes/custom/wfp_eb/dist/images/logos/logo-small.svg"></a>
       </div>
       <div class="geodash-sidebar-header-right">
         <div><a class="geodash-sidebar-header-title" href="/" ng-bind-html="ui.header.title"></a></div>
         <div><a class="geodash-sidebar-header-subtitle" href="/" ng-bind-html="ui.header.subtitle"></a></div>
+        <div class="geodash-sidebar-header-country print" ng-bind-html="state.country_title"></div>
       </div>
       <!-- <div class="geodash-sidebar-header-right-2">
         <div ng-bind-html="state.country_title"></div>
